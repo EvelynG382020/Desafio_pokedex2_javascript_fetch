@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokedex</title>
+  <!-- bootstrap -->
+  
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container-fluid header text-center">
+    <img src="pokemon-logo.gif" width="300" height="200" alt="" class="titulo-pokedex">
+  </div>
+
+
+  <!-- mostrar todos nuestros pokemones -->
+  <div class="container">
+    <div class="row" id="pokedex"> </div>
+    <!-- boton de quiero ver mas pokemons-->
+    <div class="text-center">
+      <button class="btn-dark my-4" id="more-pokemons" data-next=""> Quiero ver mas Pokemones!!!</button>
+    </div>
+  </div>
+
+
+  <!-- Modal data-pokemon -->
+  <div class="modal fade" id="pokemon-data" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pokemon-data-name"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h3 class="titulos-modal">Imagen</h3>
+            <div id="pokemon-image"> </div>
+            <hr>
+          <h3 class="titulos-modal">Tipos</h3>
+            <ol id="pokemon-types"> </ol>
+            <hr>
+          <h3 class="titulos-modal">Generaciones</h3>
+            <ol id="pokemon-generations"></ol>
+            <hr>
+          <h3 class="titulos-modal">Habilidades</h3>
+            <ol id="pokemon-abilities"></ol>
+            <hr>
+          <h3 class="titulos-modal">Movimientos</h3>
+            <ol id="pokemon-moves"></ol>
+            <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal relaciones de daño -->
+  <div class="modal fade" id="damage-data" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="type-name"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h5 class="titulos-modal">Daño doble de </h5>
+              <ol id="double-damage-from"> </ol>
+              <hr>
+            <h5 class="titulos-modal">Doble daño a</h5>
+              <ol id="double-damage-to"></ol>
+              <hr>
+            <h5 class="titulos-modal">Mitad de daño de</h5>
+              <ol id="half-damage-from"></ol>
+              <hr>
+            <h5 class="titulos-modal">Mitad de daño a</h5>
+              <ol id="half-damage-to"></ol>
+              <hr>
+            <h5 class="titulos-modal">Sin Daño de</h5>
+              <ol id="no-damage-from"></ol>
+              <hr>
+            <h5 class="titulos-modal">Sin daño a</h5>
+              <ol id="no-damage-to"></ol>
+              <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal habilidades -->
+  <div class="modal fade" id="others-pokemon-ability" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ability-name"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <h5 class="titulos-modal">Pokemones con la misma habilidad</h5>
+              <ol id="ability-pokemons-list"> </ol>
+              <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="fetch.js"></script>
+</body>
+</html>
